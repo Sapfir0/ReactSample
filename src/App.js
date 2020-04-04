@@ -2,10 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function InputField({label, type, value, onChange}) {
+function InputField({label, dataName, type, value, onChange}) {
     return (<label>
         {label}
-        <input type={type} value={value} onChange={onChange} />
+        <input data-name={dataName} type={type} value={value} onChange={onChange} />
     </label>
     );
 }
@@ -15,18 +15,10 @@ class RegisterWindow extends React.Component {
         super(props);
         this.state = {login: '', password: ''};
 
-        this.handleChangeLogin = this.handleChangeLogin.bind(this);
-        this.handleChangePassword = this.handleChangePassword.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // handleChangeLogin(event) {
-    //     this.setState({login: event.target.value});
-    // }
-    //
-    // handleChangePassword(event) {
-    //     this.setState({password: event.target.value});
-    // }
+
 
     handleSubmit(event) {
         alert('A name was submitted: ' + this.state.login + " " + this.state.password);
@@ -36,8 +28,8 @@ class RegisterWindow extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <InputField label="Login" type="text" value={this.state.login}  onChange={this.handleChangeLogin} />
-                <InputField label="Password" type="password" value={this.state.password}  onChange={this.handleChangePassword} />
+                <InputField label="Login" type="text" dataName="login" value={this.state.login}  onChange={e=> this.setState({login: e.target.value})} />
+                <InputField label="Password" dataName="password" type="password" value={this.state.password}  onChange={e=> this.setState({password: e.target.value})} />
 
                 <input type="submit" value="Submit" />
             </form>
