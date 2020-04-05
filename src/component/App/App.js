@@ -3,9 +3,9 @@ import logo from '../../logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Login from '../../pages/login';
-import Register from '../../pages/register';
-import AllUsersTable from "../../pages/allUsers";
+import Login from '../../pages/Login';
+import Register from '../../pages/Register';
+import AllUsersTable from "../../pages/AllUsers";
 
 
 
@@ -15,8 +15,6 @@ function HeaderButtons() {
         <button>Register</button>
     </div>);
 }
-
-
 
 
 function App() {
@@ -30,7 +28,6 @@ function App() {
                                 <li><Link to={'/login'} className="nav-link"> Login </Link></li>
                                 <li><Link to={'/register'} className="nav-link">Register</Link></li>
                                 <li><Link to={'/allUsers'} className="nav-link">All users</Link></li>
-
                             </ul>
                         </nav>
                         <hr />

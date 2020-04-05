@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import InputField from "../component/InputField";
 import InputForm from "../component/InputForm/InputForm";
 
 function RegisterWindow(props) {

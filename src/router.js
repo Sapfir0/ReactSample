@@ -11,7 +11,7 @@ async function post(url, params) {
         headers: {
             'Content-Type': 'application/json'
         },
-        mode: 'cors',
+        // mode: 'cors',
         body: JSON.stringify(params)
     };
     let response;

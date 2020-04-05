@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import InputField from "../InputField"
+import InputField from "../InputFields/InputField"
 import {post} from "../../router";
 
 class InputForm extends React.Component {
@@ -34,17 +34,17 @@ class InputForm extends React.Component {
 
         }
         return (
-            <form onSubmit={this.handleSubmit}>
-                {email}
-                <p> </p>
-                <InputField label="Login" type="text" value={this.state.login}
-                            onChange={e => this.setState({login: e.target.value})}/>
-                <p> </p>
-                <InputField label="Password" type="password" value={this.state.password}
-                            onChange={e => this.setState({password: e.target.value})}/>
-                <p> </p>
-                <input type="submit" value="Submit"/>
-            </form>
+                <form onSubmit={this.handleSubmit}>
+                    {email}
+                    <p> </p>
+                    <InputField label="Login" type="text" value={this.state.login}
+                                onChange={e => this.setState({login: e.target.value})}/>
+                    <p> </p>
+                    <InputField label="Password" type="password" value={this.state.password}
+                                onChange={e => this.setState({password: e.target.value})}/>
+                    <p> </p>
+                    <input type="submit" value="Submit"/>
+                </form>
         );
     }
 }

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import InputField from "../component/InputField"
 import InputForm from "../component/InputForm/InputForm";
 import styles from "./style.css"
 
