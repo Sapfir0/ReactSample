@@ -32,50 +32,20 @@ a {
 a:hover {
   color: black;
   background-color: cornflowerblue;
-  transition: 0.3s;
 }
 
 li {
-position: relative;
-list-style-type: none; /* Убираем маркеры */
-  margin: 0;
-  padding: 0;
+  position: relative;
+  list-style-type: none;
+  margin-left: 10px;
 }
 
 .navbar {
+  padding-top: 10px;
+  padding-right: 10px;
   display: flex;
-  /*flex-direction: column;*/
   flex-direction: row;
   justify-content: flex-end;
 
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 20%;
-
-
-  text-align: justify;
-  text-align-last: justify;
-  margin: auto;
-}
-
-input {
-  display: inline-block;
-
-}
-
-.submit {
-  justify-content: center;
-  display: flex;
-  width: 100%;
-}
-
-.submit:hover {
-  color: black;
-  background-color: cornflowerblue;
-  transition: 0.3s;
-}

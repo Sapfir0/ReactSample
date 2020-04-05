@@ -1,24 +1,9 @@
+table {
+    border-collapse: collapse;
+    color: white;
 
-input {
-    padding: 5px 5px 5px 2px;
-    -webkit-appearance: none;
-    border: 1px solid #333;
-    font-family: inherit;
-    font-size: 1rem;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
-.inputForm {
-    display: flex;
-    justify-content: center;
-}
-
-.reg {
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    justify-content: space-between;
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
+table, th, td {
+    border: 1px solid white;
 }

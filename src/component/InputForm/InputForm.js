@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import InputField from "../InputFields/InputField"
 import {post} from "../../router";
+import "./style.css"
 
 class InputForm extends React.Component {
     constructor(props) {

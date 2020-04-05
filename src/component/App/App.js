@@ -1,14 +1,10 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Login from '../../pages/Login';
 import Register from '../../pages/Register';
 import AllUsersTable from "../../pages/AllUsers";
-
-
-
 
 
 function App() {
