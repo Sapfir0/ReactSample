@@ -19,7 +19,9 @@ export default function AllUsersTable(props) {
     }
 
     return (<table>
-        <thead><th>login</th><th>email</th><th>password</th></thead>
+        <thead>
+            <tr><th>login</th><th>email</th><th>password</th></tr>
+        </thead>
         <tbody>{table}</tbody>
     </table>);
 }

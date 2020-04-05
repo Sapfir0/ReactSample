@@ -43,7 +43,7 @@ class InputForm extends React.Component {
                     <InputField label="Password" type="password" value={this.state.password}
                                 onChange={e => this.setState({password: e.target.value})}/>
                     <p> </p>
-                    <input type="submit" value="Submit" class="submit"/>
+                    <input type="submit" value="Submit" className="submit"/>
                 </form>
         );
     }
