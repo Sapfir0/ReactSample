@@ -4,7 +4,7 @@ import InputForm from "../component/InputForm/InputForm";
 
 function RegisterWindow(props) {
     return (
-        <InputForm password={true} login={true} email={true}/>
+        <InputForm password login email/>
     );
 }
 

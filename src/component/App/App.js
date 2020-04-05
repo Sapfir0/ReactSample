@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Login from '../../pages/login';
 import Register from '../../pages/register';
-
+import AllUsersTable from "../../pages/allUsers";
 
 
 
@@ -29,12 +29,15 @@ function App() {
                             <ul className="navbar-nav mr-auto">
                                 <li><Link to={'/login'} className="nav-link"> Login </Link></li>
                                 <li><Link to={'/register'} className="nav-link">Register</Link></li>
+                                <li><Link to={'/allUsers'} className="nav-link">All users</Link></li>
+
                             </ul>
                         </nav>
                         <hr />
                         <Switch>
                             <Route exact path='/login' component={Login} />
                             <Route exact path='/register' component={Register} />
+                            <Route exact path='/allUsers' component={AllUsersTable} />
 
                         </Switch>
                     </div>

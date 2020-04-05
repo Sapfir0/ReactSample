@@ -1,24 +1,33 @@
 import React, {Component} from 'react';
 import InputField from "../InputField"
-
+import {post} from "../../router";
 
 class InputForm extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props)
 
-        this.state = {props};
+        let propseWithoutValues = {...props};
+
+        for (let key in propseWithoutValues) {
+            propseWithoutValues[key] = "";
+        }
+
+        this.state = {...propseWithoutValues};
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.login + " " + this.state.password);
         event.preventDefault();
+        post('register', this.state).then((json) => {
+            console.log(json)
+        })
     }
 
+
+
     render() {
-        let email = '';
+        let email = ' ';
         if (this.props.email) {
             email = <InputField label="Email" type="text" value={this.state.email}
                         onChange={e => this.setState({email: e.target.value})}/>

@@ -6,7 +6,7 @@ import styles from "./style.css"
 
 function LoginWindow(props) {
     return (
-        <InputForm password={true} login={true}/>
+        <InputForm password login/>
     );
 }
 
