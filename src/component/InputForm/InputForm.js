@@ -25,7 +25,6 @@ class InputForm extends React.Component {
     }
 
 
-
     render() {
         let email = ' ';
         if (this.props.email) {
@@ -43,7 +42,7 @@ class InputForm extends React.Component {
                     <InputField label="Password" type="password" value={this.state.password}
                                 onChange={e => this.setState({password: e.target.value})}/>
                     <p> </p>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" class="submit"/>
                 </form>
         );
     }

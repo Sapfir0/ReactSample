@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./style.css"
+import "./style.css"
 // именование по бэм, подразумевется, что есть блок с классом form
 
 export default function InputField({label, type, value, onChange}) {

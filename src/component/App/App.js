@@ -9,12 +9,6 @@ import AllUsersTable from "../../pages/AllUsers";
 
 
 
-function HeaderButtons() {
-    return (<div>
-        <button>Login</button>
-        <button>Register</button>
-    </div>);
-}
 
 
 function App() {
@@ -23,19 +17,17 @@ function App() {
             <header className="App-header">
                 <Router>
                     <div>
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                        <nav className="navbar">
                             <ul className="navbar-nav mr-auto">
                                 <li><Link to={'/login'} className="nav-link"> Login </Link></li>
                                 <li><Link to={'/register'} className="nav-link">Register</Link></li>
                                 <li><Link to={'/allUsers'} className="nav-link">All users</Link></li>
                             </ul>
                         </nav>
-                        <hr />
                         <Switch>
                             <Route exact path='/login' component={Login} />
                             <Route exact path='/register' component={Register} />
                             <Route exact path='/allUsers' component={AllUsersTable} />
-
                         </Switch>
                     </div>
                 </Router>

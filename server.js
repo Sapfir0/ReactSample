@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 
-const urlencodedParser = bodyParser.urlencoded({extended: false});
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.set('port', process.env.PORT || 4000);
 
@@ -16,7 +18,7 @@ app.post('/register', urlencodedParser, (req, res, next) => {
 
     if(!req.body) return res.sendStatus(400);
     console.log(req.body);
-    console.log(req.query)
+
     res.send(`${req.body.login} - ${req.body.email}`);
 });
 
